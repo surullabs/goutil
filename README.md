@@ -12,7 +12,7 @@ or even better send a pull request.
 
 ## Licensing and Usage
 
-Ghostgres is licensed under a 3-Clause BSD license. Please consult the
+These utilities are licensed under a 3-Clause BSD license. Please consult the
 LICENSE file for details.
 
 We also ask that you please file bugs and enhancement requests if you run
