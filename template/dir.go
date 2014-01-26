@@ -1,7 +1,9 @@
 // Copyright (c) 2014, Surul Software Labs, GmbH
 // All rights reserved
-//
-// This contains utilities for working with Go templates.
+
+// Package template contains utilities for working with Go templates.
+// Most of the utilities here are convenience methods focused on writing
+// templates to disk.
 package template
 
 import (

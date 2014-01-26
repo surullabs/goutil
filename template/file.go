@@ -1,6 +1,6 @@
 // Copyright 2014, Surul Software Labs GmbH
 // All rights reserved.
-//
+
 package template
 
 import (

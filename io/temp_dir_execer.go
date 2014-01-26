@@ -1,8 +1,6 @@
 // Copyright (c) 2014, Surul Software Labs, GmbH
 // All rights reserved
-//
-// Contains io utilities. This is currently used as a dumping ground for all
-// Surul IO Utilities.
+
 package io
 
 import (

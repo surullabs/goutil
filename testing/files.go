@@ -1,8 +1,6 @@
 // Copyright (c) 2014, Surul Software Labs, GmbH
 // All rights reserved.
-//
-// This provides various testing utilities that are compatible with
-// the gocheck package.
+
 package testing
 
 import (

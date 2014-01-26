@@ -1,6 +1,6 @@
 // Copyright (c) 2014, Surul Software Labs, GmbH
 // All rights reserved
-//
+
 package io
 
 import (
