@@ -28,3 +28,30 @@ func (n *nilErrorMatcher) Check(params []interface{}, names []string) (result bo
 	}
 	return ErrorMatches.Check(params, names)
 }
+
+// ErrorIsNil checker.
+
+type errorIsNilChecker struct {
+	*CheckerInfo
+}
+
+// The IsNil checker tests whether the obtained value is nil.
+//
+// For example:
+//
+//    c.Assert(err, IsNil)
+//
+var ErrorIsNil Checker = &errorIsNilChecker{
+	&CheckerInfo{Name: "ErrorIsNil", Params: []string{"value"}},
+}
+
+func (checker *errorIsNilChecker) Check(params []interface{}, names []string) (result bool, err string) {
+	switch v := params[0].(type) {
+	case nil:
+		return true, ""
+	case error:
+		return false, v.Error()
+	default:
+		return false, fmt.Sprintf("expected error, found %T:%v", v, v)
+	}
+}
