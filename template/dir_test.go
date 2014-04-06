@@ -42,6 +42,12 @@ func (s *FileTemplaterSuite) TestFileTemplater(c *C) {
 			targetDir:   c.MkDir() + "/NonExistentDirectory/",
 			expectedErr: ".*no such file or directory.*",
 		},
+		{
+			glob:        "testdata/test.missing",
+			vars:        map[string]string{},
+			targetDir:   c.MkDir(),
+			expectedErr: "Missing variables present",
+		},
 	}
 
 	for _, test := range tests {
