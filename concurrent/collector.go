@@ -3,8 +3,9 @@
 package concurrent
 
 import (
-	"github.com/surullabs/fault"
 	"sync"
+
+	"github.com/surullabs/fault"
 )
 
 type ErrorCollector struct {
@@ -18,7 +19,7 @@ func (c *ErrorCollector) Append(err error) {
 	}
 	c.m.Lock()
 	defer c.m.Unlock()
-	c.errors.Chain(err)
+	c.errors.Append(err)
 }
 
 func (c *ErrorCollector) Error() error {

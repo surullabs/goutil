@@ -5,8 +5,9 @@ package concurrent
 
 import (
 	"fmt"
-	"github.com/surullabs/fault"
 	"sync"
+
+	"github.com/surullabs/fault"
 )
 
 var _ = fmt.Print
@@ -171,7 +172,7 @@ func (t *TicketBatch) Wait() error {
 	errs := &fault.ErrorChain{}
 	for _, ticket := range t.tickets {
 		_, err := ticket.Wait()
-		errs.Chain(err)
+		errs.Append(err)
 	}
 	return errs.AsError()
 }
